@@ -64,7 +64,7 @@ return [
             'visibility' => 'public',
             'permPublic' => 0766,
             'port' => 21,
-            'root' => '/',
+            'root' => '/home/ijok9711/'.env('FTP_ROOT').'/'.storage_path('app/public/data/medias'),
         ],
 
         'sftp' => [
@@ -74,7 +74,7 @@ return [
             'password' => '!EdNK7;}]YbSgqrC+d',
             'visibility' => 'public',
             'permPublic' => 0766,
-            'root' => '/home/ijok9711/media',
+            'root' => '/home/ijok9711/'.env('FTP_ROOT').'/'.storage_path('app/public/data/medias'),
         ],
 
         'affiches' => [
