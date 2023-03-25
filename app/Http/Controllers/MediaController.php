@@ -31,7 +31,7 @@ class MediaController extends Controller
             $file = $fileReceived->getFile();
             $extension = $file->getClientOriginalExtension();
             $fileName = Str::uuid().'.'.$extension;
-            Storage::disk('medias')->put($fileName, $file->getContent());
+            Storage::disk('sftp')->put($fileName, $file->getContent());
 
 
             unlink($file->getPathname());
@@ -55,7 +55,7 @@ class MediaController extends Controller
         $highBitrate = (new X264)->setKiloBitrate(1000);
         $newFileName = explode('.',$filename)[0].'.m3u8';
         try {
-            $treatment = FFMpeg::FromDisk('medias')
+            $treatment = FFMpeg::FromDisk('sftp')
                 ->open($filename)
                 ->exportForHLS()
                 ->addFormat($highLowBitrate, function ($media){
@@ -75,7 +75,7 @@ class MediaController extends Controller
             $treatment->cleanupTemporaryFiles();
 
             try {
-                Storage::disk('medias')->delete($filename);
+                Storage::disk('sftp')->delete($filename);
             }catch (\ErrorException $exception){
                 logger((string) $exception);
             }
