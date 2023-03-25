@@ -56,6 +56,69 @@ return [
             'throw' => false,
         ],
 
+        'ftp' => [
+            'driver' => 'ftp',
+            'host' => 'ftp.ijok9711.odns.fr',
+            'username' => 'embo@boqa.eveilmedia.tv',
+            'password' => 'Ingenieur2022@@',
+            'visibility' => 'public',
+            'permPublic' => 0766,
+            'port' => 21,
+            'root' => '/',
+        ],
+
+        'sftp' => [
+            'driver' => 'sftp',
+            'host' => 'metal.o2switch.net',
+            'username' => 'ijok9711',
+            'password' => '!EdNK7;}]YbSgqrC+d',
+            'visibility' => 'public',
+            'permPublic' => 0766,
+            'root' => '/home/ijok9711/media',
+        ],
+
+        'affiches' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/data/affiches'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        'partenaires' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/data/partenaires'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        'medias' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/data/medias'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        'proverbes' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/data/proverbes'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        'categories' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/data/categories'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
+        'sous-categories' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/data/sous-categories'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
     ],
 
     /*
