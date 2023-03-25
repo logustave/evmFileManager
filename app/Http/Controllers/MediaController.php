@@ -54,7 +54,7 @@ class MediaController extends Controller
         $midBitrate = (new X264)->setKiloBitrate(500);
         $highBitrate = (new X264)->setKiloBitrate(1000);
         $newFileName = explode('.',$filename)[0].'.m3u8';
-        try {
+//        try {
             $treatment = FFMpeg::FromDisk('sftp')
                 ->open($filename)
                 ->exportForHLS()
@@ -85,10 +85,10 @@ class MediaController extends Controller
                 'filename' => $newFileName
             ];
 
-        }catch (\ErrorException $exception){
-            logger((string) $exception);
-            return $exception;
-        }
+//        }catch (\ErrorException $exception){
+//            logger((string) $exception);
+//            return $exception;
+//        }
     }
 
 }
