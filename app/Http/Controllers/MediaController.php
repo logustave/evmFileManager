@@ -18,7 +18,7 @@ class MediaController extends Controller
     /**
      * @throws UploadFailedException
      */
-    public function createTempMedia(Request $request): Exception|\ErrorException|array
+    public function createTempMedia(Request $request)
     {
         ini_set('memory_limit', '2048M');
         set_time_limit(0);
@@ -48,7 +48,7 @@ class MediaController extends Controller
         ];
     }
 
-    public function launchHlsTreatment($filename): Exception|\ErrorException|array
+    public function launchHlsTreatment($filename)
     {
         $highLowBitrate = (new X264)->setKiloBitrate(150);
         $midBitrate = (new X264)->setKiloBitrate(500);
