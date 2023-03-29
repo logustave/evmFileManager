@@ -74,7 +74,7 @@ return [
             'password' => '!EdNK7;}]YbSgqrC+d',
             'visibility' => 'public',
             'permPublic' => 0766,
-            'root' => '/home/ijok9711/'.env('FTP_ROOT').'/'.storage_path('app/public/data/medias'),
+            'root' => '/home/ijok9711/'.env('FTP_ROOT').'/storage/app/public/data/medias'
         ],
 
         'affiches' => [
