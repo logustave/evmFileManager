@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/media/mediaTempUpload',[MediaController::class,'createTempMedia'])->name('createTempMedia');
+Route::get('/media/queue/{filename}',[MediaController::class,'getHlsTreatment'])->name('getHlsTreatment');
