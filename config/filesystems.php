@@ -58,9 +58,9 @@ return [
 
         'ftp' => [
             'driver' => 'ftp',
-            'host' => 'ftp.ijok9711.odns.fr',
-            'username' => 'embo@boqa.eveilmedia.tv',
-            'password' => 'Ingenieur2022@@',
+            'host' => '',
+            'username' => '',
+            'password' => '',
             'visibility' => 'public',
             'permPublic' => 0766,
             'port' => 21,
@@ -69,9 +69,9 @@ return [
 
         'sftp' => [
             'driver' => 'sftp',
-            'host' => 'metal.o2switch.net',
-            'username' => 'ijok9711',
-            'password' => '!EdNK7;}]YbSgqrC+d',
+            'host' => '',
+            'username' => '',
+            'password' => '',
             'visibility' => 'public',
             'permPublic' => 0766,
             'root' => '/home/ijok9711/'.env('FTP_ROOT').'/storage/app/public/data/medias'
